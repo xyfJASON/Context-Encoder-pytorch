@@ -1,0 +1,32 @@
+seed: 1234
+
+data:
+  name: CelebA-HQ
+  dataroot: /data/CelebA-HQ/
+  img_size: 128
+
+dataloader:
+  num_workers: 8
+  pin_memory: true
+  prefetch_factor: 2
+  micro_batch: 0
+
+train:
+  n_steps: 25000
+  batch_size: 256
+  pretrained: ~
+  resume: ~
+  print_freq: 100
+  save_freq: 5000
+  eval_freq: 500
+  sample_freq: 500
+
+  coef_rec: 0.999
+  coef_adv: 0.001
+
+  optim_g:
+    lr: 0.002
+    betas: [0.5, 0.999]
+  optim_d:
+    lr: 0.0002
+    betas: [0.5, 0.999]
