@@ -20,7 +20,7 @@ cd Context-Encoder-pytorch
 Create and activate a conda environment:
 
 ```shell
-conda create -n context-encoder python=3.8
+conda create -n context-encoder python=3.9
 conda activate context-encoder
 ```
 
